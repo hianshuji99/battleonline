@@ -1,0 +1,111 @@
+.tournament-page {
+  padding: 50px;
+  background: linear-gradient(135deg, #141414, #1f1f1f);
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+  z-index: 10;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.back-button i {
+  margin-right: 8px;
+}
+
+.glowing-heading {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099;
+}
+
+.tournament-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tournament-card {
+  width: 350px;
+  background: linear-gradient(145deg, #333, #444);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.tournament-card.upcoming:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.tournament-card.past {
+  background: linear-gradient(145deg, #444, #555);
+  opacity: 0.8;
+}
+
+.tournament-header h3 {
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  margin-bottom: 10px;
+}
+
+.tournament-date {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+.tournament-status, .tournament-winner {
+  font-weight: bold;
+  color: #ff0099;
+}
+
+.past-tournaments-heading {
+  margin-top: 50px;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600;
+}
+
+.tournament-description {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 15px 0;
+}
+
+.join-button {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.join-button:hover {
+  background: #0056b3;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}

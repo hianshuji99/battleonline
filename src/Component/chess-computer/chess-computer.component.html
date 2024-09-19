@@ -1,0 +1,27 @@
+<div class="chess-container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="chess-card">
+    <h2 class="chess-title">Play Chess: Player 1 vs Player 2</h2>
+
+<div class="timer">Time Elapsed: {{ elapsedTime }}s</div>
+
+    <div class="status-message">{{ message }}</div>
+    <div class="chess-board">
+      <div *ngFor="let row of board; let rowIndex = index" class="chess-row">
+        <div *ngFor="let cell of row; let colIndex = index" 
+             class="chess-cell" 
+             [ngClass]="{
+               'light': (rowIndex + colIndex) % 2 === 0, 
+               'dark': (rowIndex + colIndex) % 2 !== 0, 
+               'highlight': cell.highlight
+             }"
+             (click)="selectCell(rowIndex, colIndex)">
+          <i *ngIf="cell.piece" [ngClass]="cell.piece.icon" [ngStyle]="{ 'color': cell.piece.color === 'white' ? 'white' : 'black' }"></i>
+        </div>
+      </div>
+    </div>
+    <div class="game-actions">
+      <button class="game-button primary" (click)="startNewGame()">Start New Game</button>&nbsp;
+      <button class="game-button accent" (click)="goBack()">Back to Home</button>
+    </div>
+  </div>
+</div>

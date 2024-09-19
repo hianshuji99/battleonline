@@ -1,0 +1,148 @@
+.chess-container {
+  padding: 40px;
+  background: linear-gradient(135deg, #2c3e50, #4e4e50);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.chess-card {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+  color: white;
+  width: 80%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  display: inline-block;
+  text-align: center;
+}
+
+.chess-title {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.status-message {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.chess-row {
+  display: contents;
+}
+
+.chess-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chess-cell.light {
+  background-color: #f0d9b5;
+}
+
+.chess-cell.dark {
+  background-color: #b58863;
+  color: #fff;
+}
+
+.chess-cell i {
+  margin: 0;
+}
+
+.game-actions {
+  margin-top: 20px;
+}
+
+.game-button {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.game-button.primary {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+.game-button.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+}
+
+.game-button.accent {
+  background-color: #6c757d;
+  color: white;
+  box-shadow: 0 0 10px rgba(108, 117, 125, 0.6);
+}
+
+.game-button.accent:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(108, 117, 125, 0.8);
+}
+
+.chess-cell.highlight {
+  background-color: rgba(0, 255, 0, 0.5); /* Highlight cells for valid moves */
+}
+.celebration {
+  position: fixed; /* Use fixed to ensure it covers the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffcc00;
+  opacity: 0;
+  border-radius: 50%;
+  animation: confettiAnimation 3s infinite;
+}
+
+@keyframes confettiAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+

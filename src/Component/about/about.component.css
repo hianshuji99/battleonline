@@ -1,0 +1,9 @@
+.about-page {
+    padding: 50px;
+  }
+  
+  mat-card {
+    max-width: 600px;
+    margin: auto;
+  }
+  

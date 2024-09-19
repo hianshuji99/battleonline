@@ -1,0 +1,123 @@
+/* Style for responsive video */
+.responsive-video {
+  width: 100%; /* Make it take the full card width */
+  height: 350px; /* Limit the height of the video */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+}
+
+.game-details {
+  padding: 40px;
+  background: linear-gradient(135deg, #2c3e50, #4e4e50); /* Dark background with gradient */
+  min-height: 100vh; /* Ensure the page takes full height */
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.back-button i {
+  margin-right: 8px;
+}
+
+.detail-card {
+  width: 70%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Dark, glowing background */
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.7); /* Outer glow */
+  display: inline-block;
+  text-align: left;
+}
+
+.glowing-game-title {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99; /* Glowing text */
+  margin-bottom: 20px;
+}
+
+.game-preview {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.game-placeholder {
+  background: linear-gradient(135deg, #333, #444);
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Glowing effect */
+}
+
+.game-placeholder-text {
+  font-size: 1.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff; /* Glowing placeholder text */
+}
+
+.game-description {
+  font-size: 1.3rem;
+  color: #cccccc;
+  text-shadow: 0 0 5px #ffffff;
+  margin-bottom: 30px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.play-button-primary,
+.play-button-accent {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.play-button-primary {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+.play-button-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+}
+
+.play-button-accent {
+  background-color: #6c757d;
+  color: white;
+  box-shadow: 0 0 10px rgba(108, 117, 125, 0.6);
+}
+
+.play-button-accent:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(108, 117, 125, 0.8);
+}

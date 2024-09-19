@@ -1,0 +1,25 @@
+<div class="home-page" fxLayout="column" fxLayoutAlign="center center">
+  
+  <marquee class="marquee" behavior="scroll" direction="left">🔥 Get Ready for Epic Battles! Join Now! 🔥</marquee>
+
+  <div class="welcome-card">
+    <h1 class="glowing-text">Battle Online!</h1>
+    <p class="sub-text">Play with friends, challenge AI, and join tournaments!</p>
+    <div class="action-buttons">
+      <a class="action-button primary" href="/game-lobby">Play Now</a>
+      <a class="action-button accent" href="/tournaments">Join Tournaments</a>
+    </div>
+  </div>
+
+  <div class="featured-games">
+    <div class="game-card" *ngFor="let game of featuredGames">
+      <img [src]="game.image" alt="{{ game.name }}" class="game-image">
+      <h3 class="glowing-game">{{ game.name }}</h3>
+      <a class="game-button" href="/game-details/{{game.id}}">Start Game</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Battle Online - All Rights Reserved</p>
+  </footer>
+</div>

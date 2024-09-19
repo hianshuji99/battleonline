@@ -1,0 +1,94 @@
+<div class="game-details" fxLayout="column" fxLayoutAlign="center start">
+  <!-- Back to Home Button -->
+  <button class="back-button" (click)="goHome()">
+    <i class="fas fa-arrow-left"></i>
+    Back to Home
+  </button>
+  <br><br>
+  <div class="detail-card">
+    <h2 class="glowing-game-title">{{ game.name }}</h2>
+
+    <!-- Video or Visual Element -->
+    <div class="game-preview">
+      <ng-container [ngSwitch]="game.name">
+        <ng-container *ngSwitchCase="'Battle Royale'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/TJryIc0Cwy4?autoplay=1&loop=1&playlist=TJryIc0Cwy4&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Chess Master'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/cYDm_pod2vM?autoplay=1&loop=1&playlist=cYDm_pod2vM&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Puzzle Quest'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/iVjiPP8Z_qM?autoplay=1&loop=1&playlist=iVjiPP8Z_qM&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Tic Tac Toe'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/iEW-d02l9ew?autoplay=1&loop=1&playlist=iEW-d02l9ew&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Ludo'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/XaXTaUeqjmA?autoplay=1&loop=1&playlist=XaXTaUeqjmA&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="'Super Mario'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/NPQZGM-O3F8?autoplay=1&loop=1&playlist=NPQZGM-O3F8&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+        <ng-template #placeholder>
+          <div class="game-placeholder-text">[ Game Preview ]</div>
+        </ng-template>
+      </ng-container>
+    </div>
+
+    <div class="card-content">
+      <p class="game-description">{{ game.description }}</p>
+      <div class="action-buttons">
+        <button class="play-button-primary" (click)="playVsComputer()">Play Offline</button>
+        <button class="play-button-accent" (click)="playOnline()">Play Online</button>
+      </div>
+    </div>
+  </div>
+</div>

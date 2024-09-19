@@ -1,0 +1,41 @@
+<div class="tournament-page" fxLayout="column" fxLayoutAlign="center start">
+  <!-- Back to Home Button -->
+  <button class="back-button" onclick="window.location.href='/home'">
+    <i class="fas fa-arrow-left"></i> Back to Home
+  </button>
+  <br><br>
+  <!-- Glowing Heading for Upcoming Tournaments -->
+  <h2 class="glowing-heading">Upcoming Tournaments</h2>
+
+  <!-- Upcoming Tournaments Section -->
+  <div class="tournament-cards">
+    <div class="tournament-card upcoming" *ngFor="let tournament of tournaments">
+      <div class="tournament-header">
+        <h3>{{ tournament.name }}</h3>
+      </div>
+      <div class="tournament-content">
+        <p>Date: <span class="tournament-date">{{ tournament.date }}</span></p>
+        <p>Status: <span class="tournament-status">{{ getTournamentStatus(tournament.date) }}</span></p>
+        <p class="tournament-description">{{ tournament.description }}</p>
+        <button class="join-button">Join</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glowing Heading for Previous Tournaments -->
+  <h2 class="glowing-heading past-tournaments-heading">Previous Tournaments</h2>
+
+  <!-- Previous Tournaments Section -->
+  <div class="tournament-cards">
+    <div class="tournament-card past" *ngFor="let tournament of pastTournaments">
+      <div class="tournament-header">
+        <h3>{{ tournament.name }}</h3>
+      </div>
+      <div class="tournament-content">
+        <p>Date: <span class="tournament-date">{{ tournament.date }}</span></p>
+        <p>Winner: <span class="tournament-winner">{{ tournament.winner }}</span></p>
+        <p class="tournament-description">{{ tournament.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

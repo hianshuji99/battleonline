@@ -1,0 +1,22 @@
+<div class="game-lobby" fxLayout="column" fxLayoutAlign="center center">
+  <!-- Back to Home Button -->
+  <button class="back-button" (click)="goHome()">
+    <i class="fas fa-arrow-left"></i> Back to Home
+  </button>
+  <br><br>
+  <!-- Glowing Heading -->
+  <h2 class="glowing-heading">Choose Your Game</h2>
+
+  <!-- Game Cards Section -->
+  <div class="game-cards">
+    <div class="game-card" *ngFor="let game of games">
+      <!-- Placeholder for Game Preview -->
+      <div class="game-card-placeholder">
+        <div class="game-placeholder-text">{{ game.name }}</div>
+      </div>
+      <h3 class="glowing-title">{{ game.name }}</h3>
+      <p class="game-description">{{ game.description }}</p>
+      <button class="play-button" (click)="startGame(game.id)">Play</button>
+    </div>
+  </div>
+</div>

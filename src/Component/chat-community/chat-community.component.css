@@ -1,0 +1,16 @@
+.chat-community {
+    padding: 30px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .chat-box {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    width: 100%;
+  }
+  
