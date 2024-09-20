@@ -1,0 +1,34 @@
+<div class="ludo-game">
+    <h2 class="game-title">Ludo Game</h2>
+  
+    <div class="player-selection">
+      <label for="players">Select Number of Players: </label>
+      <select id="players" [(ngModel)]="numPlayers" (change)="initializeGame()">
+        <option *ngFor="let option of playerOptions" [value]="option">{{ option }} Players</option>
+      </select>
+    </div>
+  
+    <div class="board">
+      <!-- Ludo board design -->
+      <div class="home red-home"></div>
+      <div class="home blue-home"></div>
+      <div class="home green-home"></div>
+      <div class="home yellow-home"></div>
+      
+      <div *ngFor="let pos of getBoardKeys()" [ngClass]="getCellClass(pos)" class="board-cell">
+        <i *ngIf="board[pos]" [ngClass]="getPieceIcon(board[pos])"></i>
+      </div>
+    </div>
+  
+    <div class="dice-roll">
+      <p>{{ currentPlayer().name }}'s turn. Roll the dice:</p>
+      <button class="roll-button" (click)="rollDice()">Roll Dice</button>
+      <p class="dice-result">{{ diceResult ? 'Rolled: ' + diceResult : 'Waiting...' }}</p>
+    </div>
+  
+    <div class="winner-announcement" *ngIf="winner">
+      <p class="winner-message">{{ winner }} Wins!</p>
+      <button class="play-again" (click)="resetGame()">Play Again</button>
+    </div>
+  </div>
+  

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 interface Piece {
   name: string;
@@ -14,7 +15,7 @@ interface Piece {
   standalone: true,
   templateUrl: './chess-computer.component.html',
   styleUrls: ['./chess-computer.component.css'],
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule,FooterComponent]
 })
 export class ChessComputerComponent implements OnInit, OnDestroy {
   board: any[][] = [];

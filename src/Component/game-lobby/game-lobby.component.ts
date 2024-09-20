@@ -2,13 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-game-lobby',
   standalone: true,
   imports: [
     CommonModule, // This is needed for ngIf, ngFor, and ngClass
-    FormsModule
+    FormsModule,
+    FooterComponent
   ],
   templateUrl: './game-lobby.component.html',
   styleUrl: './game-lobby.component.css'
@@ -50,8 +52,15 @@ export class GameLobbyComponent implements OnInit {
       name: 'Super Mario', 
       image: 'assets/super-mario.jpg', 
       description: 'Join Mario on a classic platform adventure! Jump, run, and explore various worlds to rescue Princess Peach and defeat Bowser in this iconic game.' 
+    },
+    { 
+      id: 7, 
+      name: 'Snake Game', 
+      image: 'assets/snake-game.jpg', 
+      description: 'Play the classic Snake Game! Navigate the snake to eat the food and grow longer, but be careful not to hit the walls or yourself!' 
     }
   ];
+  
   
   constructor(private router: Router) {}
   ngOnInit(): void {

@@ -1,0 +1,32 @@
+<div class="game-container">
+    <span class="glowing-text">Snake Game</span>
+  
+    <div class="game-board">
+      <div *ngFor="let row of [].constructor(boardSize); let x = index" class="row">
+        <div
+          *ngFor="let cell of [].constructor(boardSize); let y = index"
+          class="cell"
+          [ngClass]="{
+            'snake-cell': isSnakeCell(x, y),
+            'snake-head': isSnakeHead(x, y),
+            'food-cell': isFoodCell(x, y)
+          }"
+        ></div>
+      </div>
+    </div>
+  
+    <div class="control-board">
+      <button (click)="changeDirection('ArrowUp')">Up</button>
+      <button (click)="changeDirection('ArrowDown')">Down</button>
+      <button (click)="changeDirection('ArrowLeft')">Left</button>
+      <button (click)="changeDirection('ArrowRight')">Right</button>
+    </div>
+  
+    <div *ngIf="gameOver" class="game-over">
+      <p>Game Over! Your score: {{ score }}</p>
+      <button class="game-button" (click)="resetGame()">Play Again</button>
+    </div>
+  
+    <div *ngIf="!gameOver" class="score">Score: {{ score }}</div>
+  </div>
+  <app-footer></app-footer>

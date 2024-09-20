@@ -58,8 +58,15 @@ import { AboutComponent } from '../Component/about/about.component';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ChessComputerComponent } from '../Component/chess-computer/chess-computer.component';
+import { TicTacToeComponent } from '../Component/tic-tac-toe/tic-tac-toe.component';
+import { LudoComponent } from '../Component/ludo/ludo.component';
+import { SnakeGameComponent } from '../Component/snake-game/snake-game.component';
 NgModule({
-  declarations: [AppComponent, LeaderboardComponent, ChatCommunityComponent, TournamentsComponent, FaqComponent, AboutComponent,HomeComponent,ChessComputerComponent,GameDetailsComponent,GameLobbyComponent],
+  declarations: [AppComponent, LeaderboardComponent, ChatCommunityComponent, TournamentsComponent, FaqComponent, AboutComponent,
+    HomeComponent,ChessComputerComponent,
+    GameDetailsComponent,GameLobbyComponent,
+    TicTacToeComponent,LudoComponent,
+    SnakeGameComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

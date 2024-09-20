@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-tournaments',
   standalone: true,
   imports: [
     CommonModule, // This is needed for ngIf, ngFor, and ngClass
-    FormsModule
+    FormsModule,
+    FooterComponent
   ],
   templateUrl: './tournaments.component.html',
   styleUrl: './tournaments.component.css'

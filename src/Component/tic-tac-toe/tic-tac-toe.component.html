@@ -1,0 +1,19 @@
+<div class="tic-tac-toe">
+    <h2 class="game-title">Tic Tac Toe</h2>
+  
+    <p class="turn-indicator" *ngIf="!winner">{{ currentPlayer }}'s Turn ({{ currentPlayer === 'Player 1' ? 'X' : 'O' }})</p>
+    <p class="winner-indicator" *ngIf="winner">{{ winner === 'Draw' ? 'It\'s a Draw!' : winner + ' Wins!' }}</p>
+  
+    <!-- Confetti Celebration -->
+    <div *ngIf="winner && winner !== 'Draw'" class="confetti-container"></div>
+  
+    <div class="board">
+      <div *ngFor="let cell of board; let i = index" class="cell" (click)="playMove(i)">
+        <i *ngIf="cell === 'X'" class="fas fa-times x-icon"></i>
+        <i *ngIf="cell === 'O'" class="far fa-circle o-icon"></i>
+      </div>
+    </div>
+  
+    <button class="reset-button" (click)="resetGame()">Reset Game</button>
+  </div>
+  <app-footer></app-footer>

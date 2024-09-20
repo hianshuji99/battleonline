@@ -1,0 +1,181 @@
+/* Confetti celebration animation */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So it doesn't interfere with gameplay */
+    overflow: hidden;
+    z-index: 10; /* On top of everything */
+  }
+  
+  .confetti-container::before, 
+  .confetti-container::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff33cc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow:
+      20px 50px #ff33cc,
+      -20px 50px #33ccff,
+      50px 50px #ffcc33,
+      -50px 50px #ff0033,
+      100px 50px #00ffcc,
+      -100px 50px #cc00ff;
+    animation: confetti 1.5s ease-out forwards;
+  }
+  
+  .confetti-container::after {
+    animation-delay: 0.3s;
+  }
+  
+  /* Confetti animation keyframes */
+  @keyframes confetti {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, calc(100vh + 50px)) scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  /* General Tic-Tac-Toe styling */
+  .tic-tac-toe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(25, 25, 25, 0.8));
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('https://www.transparenttextures.com/patterns/purty-wood.png');
+    color: #1b171a;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    padding: 20px;
+    position: relative; /* To position the confetti on top */
+  }
+  
+  .game-title {
+    font-size: 3rem;
+    color: #ff33cc;
+    text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff33cc;
+    margin-bottom: 30px;
+    animation: glow 2s infinite alternate;
+  }
+  
+  .turn-indicator, .winner-indicator {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    grid-gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cell:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+  }
+  
+  .x-icon {
+    font-size: 4rem;
+    color: #ff3366;
+    text-shadow: 0 0 20px #ff3366, 0 0 30px #ff3366;
+    animation: bounceX 1s ease-in-out;
+  }
+  
+  .o-icon {
+    font-size: 4rem;
+    color: #00ccff;
+    text-shadow: 0 0 20px #00ccff, 0 0 30px #00ccff;
+    animation: bounceO 1s ease-in-out;
+  }
+  
+  .reset-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #ff6600, #ff0033);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background: linear-gradient(135deg, #ff9933, #ff3366);
+    transform: scale(1.1);
+  }
+  
+  .winner-indicator {
+    font-size: 1.8rem;
+    color: #33ff33;
+    text-shadow: 0 0 20px #33ff33, 0 0 30px #33ff33;
+    animation: glowWin 2s infinite alternate;
+  }
+  
+  /* Animations */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 15px #ff33cc, 0 0 25px #ff33cc;
+    }
+    100% {
+      text-shadow: 0 0 30px #ff33cc, 0 0 40px #ff33cc;
+    }
+  }
+  
+  @keyframes bounceX {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes bounceO {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes glowWin {
+    0% {
+      color: #ff9933;
+    }
+    100% {
+      color: #33ff33;
+    }
+  }
+  
+  

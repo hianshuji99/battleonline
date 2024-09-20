@@ -57,6 +57,9 @@ import { AboutComponent } from '../Component/about/about.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { ChessComputerComponent } from '../Component/chess-computer/chess-computer.component';
+import { TicTacToeComponent } from '../Component/tic-tac-toe/tic-tac-toe.component';
+import { LudoComponent } from '../Component/ludo/ludo.component';
+import { SnakeGameComponent } from '../Component/snake-game/snake-game.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,10 @@ import { ChessComputerComponent } from '../Component/chess-computer/chess-comput
     HomeComponent,
     ChessComputerComponent,
     GameDetailsComponent,
-    GameLobbyComponent
+    GameLobbyComponent,
+    TicTacToeComponent,
+    LudoComponent,
+    SnakeGameComponent
   ],
   imports: [
     AppRoutingModule,

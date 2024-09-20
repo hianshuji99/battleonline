@@ -10,6 +10,10 @@ import { FaqComponent } from '../Component/faq/faq.component';
 import { AboutComponent } from '../Component/about/about.component';
 import { NgModule } from '@angular/core';
 import { ChessComputerComponent } from '../Component/chess-computer/chess-computer.component';
+import { FooterComponent } from '../Component/footer/footer.component';
+import { TicTacToeComponent } from '../Component/tic-tac-toe/tic-tac-toe.component';
+import { LudoComponent } from '../Component/ludo/ludo.component';
+import { SnakeGameComponent } from '../Component/snake-game/snake-game.component';
 
 
 export const routes: Routes = [
@@ -23,6 +27,11 @@ export const routes: Routes = [
     { path: 'tournaments', component: TournamentsComponent },
     { path: 'faq', component: FaqComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'footer', component: FooterComponent },
+    { path: 'tic-tac-toe', component: TicTacToeComponent },
+    { path: 'ludo', component: LudoComponent },
+    { path: 'snake-game', component: SnakeGameComponent },
+
     { path: '', redirectTo: '/home', pathMatch: 'full' },
   ];
 

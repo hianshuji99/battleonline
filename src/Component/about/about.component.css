@@ -1,9 +1,42 @@
 .about-page {
-    padding: 50px;
+  background: linear-gradient(135deg, #1a1a1d, #4e4e50);
+  min-height: 100vh;
+  padding: 50px;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.about-card {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+  animation: glow 1.5s infinite alternate;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #00ff99;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
   }
-  
-  mat-card {
-    max-width: 600px;
-    margin: auto;
+  to {
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
   }
-  
+}

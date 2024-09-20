@@ -77,6 +77,17 @@
             </iframe>
           </div>
         </ng-container>
+        <ng-container *ngSwitchCase="'Snake Game'">
+          <div class="responsive-video-wrapper">
+            <iframe
+              class="responsive-video"
+              src="https://www.youtube.com/embed/1P3ZgLOy-w8?autoplay=1&loop=1&playlist=1P3ZgLOy-w8&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
         <ng-template #placeholder>
           <div class="game-placeholder-text">[ Game Preview ]</div>
         </ng-template>
@@ -92,3 +103,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

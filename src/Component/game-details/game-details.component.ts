@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-game-details',
@@ -8,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './game-details.component.html',
   styleUrls: ['./game-details.component.css'],
   imports: [
-    CommonModule
+    CommonModule,FooterComponent
   ]
 })
 export class GameDetailsComponent implements OnInit {
@@ -50,8 +51,15 @@ export class GameDetailsComponent implements OnInit {
       name: 'Super Mario', 
       image: '', 
       description: 'Join Mario on a classic platform adventure! Jump, run, and explore various worlds to rescue Princess Peach and defeat Bowser in this iconic game.' 
+    },
+    { 
+      id: 7, 
+      name: 'Snake Game', 
+      image: '', 
+      description: 'Play the classic Snake Game! Navigate the snake to eat the food and grow longer, but be careful not to hit the walls or yourself!' 
     }
   ];
+  
   
 
   constructor(private route: ActivatedRoute, private router: Router) {}
@@ -65,7 +73,28 @@ export class GameDetailsComponent implements OnInit {
     if (this.game && this.game.name === 'Chess Master') {
       this.router.navigate(['/chess-computer']);
     }
+    else if (this.game && this.game.name === 'Battle Royale') {
+      this.router.navigate(['/battle-royale']);
+    }
+    else if (this.game && this.game.name === 'Puzzle Quest') {
+      this.router.navigate(['/puzzle-quest']);
+    }
+    else if (this.game && this.game.name === 'Tic Tac Toe') {
+      this.router.navigate(['/tic-tac-toe']);
+    }
+      else if (this.game && this.game.name === 'Ludo') {
+      this.router.navigate(['/ludo']);
+    }
+    else if (this.game && this.game.name === 'Super Mario') {
+      this.router.navigate(['/super-mario']);
   }
+  else if (this.game && this.game.name === 'Snake Game') {
+      this.router.navigate(['/snake-game']);
+    }
+    else {
+      this.router.navigate(['/home']);
+    }
+}
   playOnline(): void {
     // Implement online play logic here
   }
