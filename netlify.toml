@@ -3,5 +3,5 @@ publish = "dist/battleonline"
 command = "ng build"
 [[redirects]]
 from = "/*"
-to"/index.html"
-status 200
+to = "/index.html"
+status = 200
